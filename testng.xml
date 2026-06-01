@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- parallel="methods" để hỗ trợ chạy song song. Tăng thread-count khi muốn thực sự parallel. -->
+<suite name="Parallel Suite" parallel="methods" thread-count="1">
+    <parameter name="env" value="stg"/>
+    <listeners>
+        <listener class-name="com.webselenium.listener.TestListener"/>
+    </listeners>
+    <test name="Regression">
+        <classes>
+<!--            <class name="com.webselenium.tests.CheckLoginFunction"/>-->
+<!--            <class name="com.webselenium.tests.CheckRegisterFunction"/>-->
+<!--            <class name="com.webselenium.tests.CheckAccountInfo"/>-->
+<!--            <class name="com.webselenium.tests.CheckAllGamesPlayable"/>-->
+<!--            <class name="com.webselenium.tests.CheckGameInventory"/>-->
+            <class name="com.webselenium.tests.CheckSampleGamesPlayable"/>
+        </classes>
+    </test>
+</suite>

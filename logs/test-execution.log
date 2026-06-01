@@ -1,0 +1,200 @@
+2026-05-29 11:32:30.449 [main] INFO  com.webselenium.helpers.LogUtils - ===== START SUITE: Regression =====
+2026-05-29 11:32:34.657 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - >>> START TEST: testSampleGamesPlayable
+2026-05-29 11:32:38.745 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - Disabled implicit wait (was 10s)
+2026-05-29 11:32:38.857 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - Attempt 1: Clicked CỔNG GAME
+2026-05-29 11:32:39.793 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - Attempt 1: Xem thêm button xuất hiện ✓
+2026-05-29 11:33:07.836 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - Pre-expand done: 30 clicks, 628 tiles
+2026-05-29 11:33:07.847 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - Snapshot 628 tiles để chọn sample
+2026-05-29 11:33:07.849 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - Sample 189 game (~7/provider × 37 providers)
+2026-05-29 11:33:10.007 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 1/189 [CỔNG GAME / Techplay] Siêu Sao World Cup -> PASS (NEW_TAB)
+2026-05-29 11:33:10.673 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 2/189 [CỔNG GAME / Techplay] Kho Báu Viking -> PASS (NEW_TAB)
+2026-05-29 11:33:11.413 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 3/189 [CỔNG GAME / Techplay] Avatar -> PASS (NEW_TAB)
+2026-05-29 11:33:13.176 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 4/189 [CỔNG GAME / Techplay] Mã Đáo Thành Công -> PASS (NEW_TAB)
+2026-05-29 11:33:14.146 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 5/189 [CỔNG GAME / Techplay] Ất Tỵ Phú Quý -> PASS (NEW_TAB)
+2026-05-29 11:33:15.290 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 6/189 [CỔNG GAME / Techplay] Đá Gà -> PASS (NEW_TAB)
+2026-05-29 11:33:16.453 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 7/189 [CỔNG GAME / Techplay] Sắc Xuân Chợ Tết -> PASS (NEW_TAB)
+2026-05-29 11:33:21.804 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 8/189 [CỔNG GAME / tomhorn] Blackbeard's Quest T'n'p -> PASS (NEW_TAB)
+2026-05-29 11:33:23.817 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 9/189 [CỔNG GAME / tomhorn] Sổ Tay Thần Chú -> PASS (NEW_TAB)
+2026-05-29 11:33:25.809 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 10/189 [CỔNG GAME / tomhorn] Sizable Win T'n'p -> PASS (NEW_TAB)
+2026-05-29 11:33:28.615 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 11/189 [CỔNG GAME / tomhorn] Triple Joker T'n'p -> PASS (NEW_TAB)
+2026-05-29 11:33:30.737 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 12/189 [CỔNG GAME / tomhorn] The Cup T'n'p -> PASS (NEW_TAB)
+2026-05-29 11:33:32.726 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 13/189 [CỔNG GAME / tomhorn] Thủ Lĩnh Hoang Mạc -> PASS (NEW_TAB)
+2026-05-29 11:33:35.434 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 14/189 [CỔNG GAME / tomhorn] Trứng Rồng -> PASS (NEW_TAB)
+2026-05-29 11:33:37.670 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 15/189 [CỔNG GAME / rik] Aviator -> PASS (NEW_TAB)
+2026-05-29 11:33:39.860 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 16/189 [CỔNG GAME / rik] Tài Xỉu Mini -> PASS (NEW_TAB)
+2026-05-29 11:33:41.079 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 17/189 [CỔNG GAME / rik] Candy Fruit Samurai -> PASS (NEW_TAB)
+2026-05-29 11:33:42.035 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 18/189 [CỔNG GAME / rik] Bầu Cua Mini -> PASS (NEW_TAB)
+2026-05-29 11:33:42.966 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 19/189 [CỔNG GAME / rik] Bầu Cua -> PASS (NEW_TAB)
+2026-05-29 11:33:43.843 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 20/189 [CỔNG GAME / rik] Candy -> PASS (NEW_TAB)
+2026-05-29 11:33:44.766 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 21/189 [CỔNG GAME / rik] Bầu Cua -> PASS (NEW_TAB)
+2026-05-29 11:33:47.116 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 22/189 [CỔNG GAME / yggdrasil] Devour The Weak -> PASS (NEW_TAB)
+2026-05-29 11:33:48.059 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 23/189 [CỔNG GAME / yggdrasil] Blood Moon Wilds -> PASS (NEW_TAB)
+2026-05-29 11:33:48.787 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 24/189 [CỔNG GAME / yggdrasil] Champions Of Rome -> PASS (NEW_TAB)
+2026-05-29 11:33:49.826 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 25/189 [CỔNG GAME / yggdrasil] Badger Miners -> PASS (NEW_TAB)
+2026-05-29 11:33:50.570 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 26/189 [CỔNG GAME / yggdrasil] 12 Trojan Mysteries -> PASS (NEW_TAB)
+2026-05-29 11:33:51.284 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 27/189 [CỔNG GAME / yggdrasil] 90k Yeti Gigablox -> PASS (NEW_TAB)
+2026-05-29 11:33:52.335 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 28/189 [CỔNG GAME / yggdrasil] 10x Rewind -> PASS (NEW_TAB)
+2026-05-29 11:33:53.034 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 29/189 [CỔNG GAME / ThunderKick] Bork The Berzerker -> PASS (NEW_TAB)
+2026-05-29 11:33:54.459 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 30/189 [CỔNG GAME / ThunderKick] Divine Lotus -> PASS (NEW_TAB)
+2026-05-29 11:33:55.185 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 31/189 [CỔNG GAME / ThunderKick] Babushkas -> PASS (NEW_TAB)
+2026-05-29 11:33:55.873 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 32/189 [CỔNG GAME / ThunderKick] Beat The Beast: Quetzalcoatl's Trial -> PASS (NEW_TAB)
+2026-05-29 11:33:56.920 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 33/189 [CỔNG GAME / ThunderKick] 12 Bolts Of Thunder -> PASS (NEW_TAB)
+2026-05-29 11:33:58.787 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 34/189 [CỔNG GAME / ThunderKick] Beat The Beast: Griffin’s Gold Reborn -> PASS (NEW_TAB)
+2026-05-29 11:34:04.996 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 35/189 [CỔNG GAME / ThunderKick] Beat The Beast: Mighty Sphinx -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:34:07.889 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 36/189 [CỔNG GAME / habanero] Bikini Island -> PASS (NEW_TAB)
+2026-05-29 11:34:09.100 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 37/189 [CỔNG GAME / habanero] Bombs Away -> PASS (NEW_TAB)
+2026-05-29 11:34:10.284 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 38/189 [CỔNG GAME / habanero] Double Double Bonus Poker 10 Hand -> PASS (NEW_TAB)
+2026-05-29 11:34:11.276 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 39/189 [CỔNG GAME / habanero] Bonus Poker 1 Hand -> PASS (NEW_TAB)
+2026-05-29 11:34:12.342 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 40/189 [CỔNG GAME / habanero] Cashosaurus -> PASS (NEW_TAB)
+2026-05-29 11:34:13.433 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 41/189 [CỔNG GAME / habanero] Cash Reef -> PASS (NEW_TAB)
+2026-05-29 11:34:14.651 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 42/189 [CỔNG GAME / habanero] American Baccarat Zero Commission -> PASS (NEW_TAB)
+2026-05-29 11:34:16.518 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 43/189 [CỔNG GAME / playngo] 3-Hand Casino Hold'em -> PASS (NEW_TAB)
+2026-05-29 11:34:17.211 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 44/189 [CỔNG GAME / playngo] Champions Of Mithrune -> PASS (NEW_TAB)
+2026-05-29 11:34:17.859 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 45/189 [CỔNG GAME / playngo] Ankh Of Anubis -> PASS (NEW_TAB)
+2026-05-29 11:34:18.526 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 46/189 [CỔNG GAME / playngo] Cloud Quest -> PASS (NEW_TAB)
+2026-05-29 11:34:19.168 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 47/189 [CỔNG GAME / playngo] Casino Hold'em -> PASS (NEW_TAB)
+2026-05-29 11:34:19.823 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 48/189 [CỔNG GAME / playngo] Boat Bonanza Down Under -> PASS (NEW_TAB)
+2026-05-29 11:34:20.482 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 49/189 [CỔNG GAME / playngo] Crazy Cows -> PASS (NEW_TAB)
+2026-05-29 11:34:23.367 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 50/189 [CỔNG GAME / AskMeBet] Caishen Coming -> PASS (NEW_TAB)
+2026-05-29 11:34:29.664 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 51/189 [CỔNG GAME / AskMeBet] Alice -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:34:31.530 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 52/189 [CỔNG GAME / AskMeBet] Bust Treasury -> PASS (NEW_TAB)
+2026-05-29 11:34:32.567 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 53/189 [CỔNG GAME / AskMeBet] Diamond Mogul -> PASS (NEW_TAB)
+2026-05-29 11:34:33.259 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 54/189 [CỔNG GAME / AskMeBet] Big Hammer -> PASS (NEW_TAB)
+2026-05-29 11:34:34.572 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 55/189 [CỔNG GAME / AskMeBet] 3 Gods Fishing -> PASS (NEW_TAB)
+2026-05-29 11:34:35.667 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 56/189 [CỔNG GAME / AskMeBet] Candy Dynasty -> PASS (NEW_TAB)
+2026-05-29 11:34:36.576 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 57/189 [CỔNG GAME / DragonSoft] Bakufu Shogun -> PASS (NEW_TAB)
+2026-05-29 11:34:37.622 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 58/189 [CỔNG GAME / DragonSoft] Bonus Cat -> PASS (NEW_TAB)
+2026-05-29 11:34:38.742 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 59/189 [CỔNG GAME / DragonSoft] Candy Dynasty -> PASS (NEW_TAB)
+2026-05-29 11:34:39.766 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 60/189 [CỔNG GAME / DragonSoft] Big Diamond -> PASS (NEW_TAB)
+2026-05-29 11:34:40.847 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 61/189 [CỔNG GAME / DragonSoft] Caishen Coming -> PASS (NEW_TAB)
+2026-05-29 11:34:41.897 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 62/189 [CỔNG GAME / DragonSoft] Buffalo Burst -> PASS (NEW_TAB)
+2026-05-29 11:34:42.924 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 63/189 [CỔNG GAME / DragonSoft] Bingo Fishing -> PASS (NEW_TAB)
+2026-05-29 11:34:44.590 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 64/189 [CỔNG GAME / CQ9] Apsaras -> PASS (NEW_TAB)
+2026-05-29 11:34:45.641 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 65/189 [CỔNG GAME / CQ9] Dollar Bomb -> PASS (NEW_TAB)
+2026-05-29 11:34:46.653 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 66/189 [CỔNG GAME / CQ9] Cricket Fever -> PASS (NEW_TAB)
+2026-05-29 11:34:47.651 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 67/189 [CỔNG GAME / CQ9] Crazy Nuozha -> PASS (NEW_TAB)
+2026-05-29 11:34:53.872 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 68/189 [CỔNG GAME / CQ9] Alice Run -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:34:58.022 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 69/189 [CỔNG GAME / CQ9] Boots Of Luck -> PASS (NEW_TAB)
+2026-05-29 11:34:59.032 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 70/189 [CỔNG GAME / CQ9] Apollo -> FAIL (NEW_TAB) | Invalid URL: 
+2026-05-29 11:34:59.849 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 71/189 [CỔNG GAME / pragmatic] 5 Frozen Charms Megaways -> PASS (NEW_TAB)
+2026-05-29 11:35:00.523 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 72/189 [CỔNG GAME / pragmatic] Cleocatra -> PASS (NEW_TAB)
+2026-05-29 11:35:01.137 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 73/189 [CỔNG GAME / pragmatic] 5 Lions Megaways -> PASS (NEW_TAB)
+2026-05-29 11:35:01.736 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 74/189 [CỔNG GAME / pragmatic] 5 Lions Gold -> PASS (NEW_TAB)
+2026-05-29 11:35:02.330 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 75/189 [CỔNG GAME / pragmatic] Baccarat Lobby -> PASS (NEW_TAB)
+2026-05-29 11:35:02.919 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 76/189 [CỔNG GAME / pragmatic] 5 Rabbits Megaways -> PASS (NEW_TAB)
+2026-05-29 11:35:03.507 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 77/189 [CỔNG GAME / pragmatic] Aztec Gems Deluxe -> PASS (NEW_TAB)
+2026-05-29 11:35:04.548 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 78/189 [CỔNG GAME / BlueprintGaming] Diamond Mine 2 -> PASS (NEW_TAB)
+2026-05-29 11:35:05.591 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 79/189 [CỔNG GAME / BlueprintGaming] Bankin' Bacon -> PASS (NEW_TAB)
+2026-05-29 11:35:06.597 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 80/189 [CỔNG GAME / BlueprintGaming] Big Cat King Megaways -> PASS (NEW_TAB)
+2026-05-29 11:35:07.653 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 81/189 [CỔNG GAME / BlueprintGaming] Bon Bomb Bonanza -> PASS (NEW_TAB)
+2026-05-29 11:35:08.698 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 82/189 [CỔNG GAME / BlueprintGaming] Bounty Hunter Unchained -> PASS (NEW_TAB)
+2026-05-29 11:35:09.398 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 83/189 [CỔNG GAME / BlueprintGaming] 5 Pots O’riches -> PASS (NEW_TAB)
+2026-05-29 11:35:11.214 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 84/189 [CỔNG GAME / BlueprintGaming] Crypt Of The Dead -> PASS (NEW_TAB)
+2026-05-29 11:35:13.292 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 85/189 [CỔNG GAME / jili] Baccarat -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:35:15.559 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 86/189 [CỔNG GAME / jili] Devil Fire 2 -> PASS (NEW_TAB)
+2026-05-29 11:35:16.513 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 87/189 [CỔNG GAME / jili] Calaca Bingo -> PASS (NEW_TAB)
+2026-05-29 11:35:17.372 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 88/189 [CỔNG GAME / jili] Bubble Beauty -> PASS (NEW_TAB)
+2026-05-29 11:35:18.418 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 89/189 [CỔNG GAME / jili] All-Star Fishing -> PASS (NEW_TAB)
+2026-05-29 11:35:19.243 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 90/189 [CỔNG GAME / jili] Callbreak Quick -> PASS (NEW_TAB)
+2026-05-29 11:35:20.043 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 91/189 [CỔNG GAME / jili] Boom Legend -> PASS (NEW_TAB)
+2026-05-29 11:35:24.938 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 92/189 [CỔNG GAME / onegame] Double Dragon -> PASS (NEW_TAB)
+2026-05-29 11:35:29.722 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 93/189 [CỔNG GAME / onegame] Beautiful Peony -> PASS (NEW_TAB)
+2026-05-29 11:35:33.522 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 94/189 [CỔNG GAME / onegame] 88 Treasures -> PASS (NEW_TAB)
+2026-05-29 11:35:36.648 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 95/189 [CỔNG GAME / onegame] Double Happiness -> PASS (NEW_TAB)
+2026-05-29 11:35:37.855 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 96/189 [CỔNG GAME / onegame] Break The Bank -> PASS (NEW_TAB)
+2026-05-29 11:35:41.305 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 97/189 [CỔNG GAME / onegame] 88 Golden Fortunes -> PASS (NEW_TAB)
+2026-05-29 11:35:44.273 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 98/189 [CỔNG GAME / onegame] Celebrating Lions -> PASS (NEW_TAB)
+2026-05-29 11:35:46.142 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 99/189 [CỔNG GAME / evoplay] Courier Sweeper -> PASS (NEW_TAB)
+2026-05-29 11:35:52.338 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 100/189 [CỔNG GAME / evoplay] Bonanza Wheel -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:35:53.769 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 101/189 [CỔNG GAME / evoplay] Christmas Crash -> PASS (NEW_TAB)
+2026-05-29 11:35:55.776 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 102/189 [CỔNG GAME / evoplay] Clash Of Pirates -> PASS (NEW_TAB)
+2026-05-29 11:35:57.506 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 103/189 [CỔNG GAME / evoplay] Ace Round -> PASS (NEW_TAB)
+2026-05-29 11:35:59.445 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 104/189 [CỔNG GAME / evoplay] Candy Dreams -> PASS (NEW_TAB)
+2026-05-29 11:36:05.831 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 105/189 [CỔNG GAME / evoplay] Dolphins Treasure -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:36:06.458 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 106/189 [CỔNG GAME / pgsoft] Bikini Paradise -> PASS (NEW_TAB)
+2026-05-29 11:36:07.078 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 107/189 [CỔNG GAME / pgsoft] Crypto Gold -> PASS (NEW_TAB)
+2026-05-29 11:36:07.701 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 108/189 [CỔNG GAME / pgsoft] Double Fortune -> PASS (NEW_TAB)
+2026-05-29 11:36:08.301 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 109/189 [CỔNG GAME / pgsoft] Butterfly Blossom -> PASS (NEW_TAB)
+2026-05-29 11:36:08.919 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 110/189 [CỔNG GAME / pgsoft] Caishen Wins -> PASS (NEW_TAB)
+2026-05-29 11:36:09.541 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 111/189 [CỔNG GAME / pgsoft] Cocktail Nights -> PASS (NEW_TAB)
+2026-05-29 11:36:10.173 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 112/189 [CỔNG GAME / pgsoft] Battleground Royale -> PASS (NEW_TAB)
+2026-05-29 11:36:11.718 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 113/189 [CỔNG GAME / netent] Dead Or Alive 2 Feature Buy -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:13.384 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 114/189 [CỔNG GAME / netent] Dead Or Alive 2 -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:14.880 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 115/189 [CỔNG GAME / netent] Cornelius -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:16.443 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 116/189 [CỔNG GAME / netent] Dark King: Forbidden Riches -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:17.872 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 117/189 [CỔNG GAME / netent] Dazzle Me Megaways -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:19.367 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 118/189 [CỔNG GAME / netent] Cash Noire -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:20.874 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 119/189 [CỔNG GAME / netent] Butterfly Staxx -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:21.722 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 120/189 [CỔNG GAME / DreamGaming] Andar Bahar -> PASS (NEW_TAB)
+2026-05-29 11:36:23.168 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 121/189 [CỔNG GAME / DreamGaming] Baccarat -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:29.430 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 122/189 [CỔNG GAME / DreamGaming] Bull Bull -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:36:30.080 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 123/189 [CỔNG GAME / ezugi] Andar Bahar -> PASS (NEW_TAB)
+2026-05-29 11:36:31.496 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 124/189 [CỔNG GAME / ezugi] Baccarat -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:36:37.762 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 125/189 [CỔNG GAME / ezugi] Blackjack -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:36:44.024 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 126/189 [CỔNG GAME / ezugi] Casino Marina Baccarat A -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:36:46.557 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 127/189 [CỔNG GAME / fachai] Cowboys -> PASS (NEW_TAB)
+2026-05-29 11:36:47.479 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 128/189 [CỔNG GAME / fachai] Chilihuahua -> PASS (NEW_TAB)
+2026-05-29 11:36:48.385 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 129/189 [CỔNG GAME / fachai] Crazy Buffalo -> PASS (NEW_TAB)
+2026-05-29 11:36:49.310 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 130/189 [CỔNG GAME / fachai] Da Le Men -> PASS (NEW_TAB)
+2026-05-29 11:36:50.191 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 131/189 [CỔNG GAME / fachai] Chinese New Year -> PASS (NEW_TAB)
+2026-05-29 11:36:51.071 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 132/189 [CỔNG GAME / fachai] Animal Racing -> PASS (NEW_TAB)
+2026-05-29 11:36:51.951 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 133/189 [CỔNG GAME / fachai] Chinese New Year 2 -> PASS (NEW_TAB)
+2026-05-29 11:36:58.355 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 134/189 [CỔNG GAME / yeebet] Classic Baccarat -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:37:04.743 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 135/189 [CỔNG GAME / yeebet] Auto Roulette -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:37:05.640 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 136/189 [CỔNG GAME / go] Bầu Cua -> PASS (NEW_TAB)
+2026-05-29 11:37:06.901 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 137/189 [CỔNG GAME / go] Aviator -> PASS (NEW_TAB)
+2026-05-29 11:37:07.846 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 138/189 [CỔNG GAME / b52] Bầu Cua -> PASS (NEW_TAB)
+2026-05-29 11:37:10.018 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 139/189 [CỔNG GAME / b52] Bầu Cua Sexy -> PASS (NEW_TAB)
+2026-05-29 11:37:11.277 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 140/189 [CỔNG GAME / b52] Bomb Squad -> PASS (NEW_TAB)
+2026-05-29 11:37:12.233 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 141/189 [CỔNG GAME / b52] Black Jack -> PASS (NEW_TAB)
+2026-05-29 11:37:13.114 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 142/189 [CỔNG GAME / b52] Aviator -> PASS (NEW_TAB)
+2026-05-29 11:37:14.270 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 143/189 [CỔNG GAME / ebet] Bac Gợi Cảm -> PASS (NEW_TAB)
+2026-05-29 11:37:14.923 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 144/189 [CỔNG GAME / ebet] Bac Thần Tài -> PASS (NEW_TAB)
+2026-05-29 11:37:16.507 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 145/189 [CỔNG GAME / Evolution] Bonsai Speed Baccarat B -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:17.958 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 146/189 [CỔNG GAME / Evolution] Bonsai Speed Baccarat A -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:19.425 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 147/189 [CỔNG GAME / Evolution] Baccarat -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:20.973 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 148/189 [CỔNG GAME / Evolution] Baccarat C -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:22.455 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 149/189 [CỔNG GAME / Evolution] Bonsai Speed Baccarat C -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:23.887 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 150/189 [CỔNG GAME / Evolution] Baccarat A -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:25.355 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 151/189 [CỔNG GAME / Evolution] Baccarat B -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:26.762 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 152/189 [CỔNG GAME / hogaming] Baccarat -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:33.005 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 153/189 [CỔNG GAME / hogaming] Blackjack -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:37:34.404 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 154/189 [CỔNG GAME / microgaming] Baccarat -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:37:39.619 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 155/189 [CỔNG GAME / microgaming] Baccarat (Nc) -> PASS (NEW_TAB)
+2026-05-29 11:37:40.287 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 156/189 [CỔNG GAME / microgaming] Baccarat Live -> PASS (NEW_TAB)
+2026-05-29 11:37:46.507 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 157/189 [CỔNG GAME / viacasino] Baccarat Cổ Điển -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:37:52.723 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 158/189 [CỔNG GAME / viacasino] Blockchain Thai Hi Lo -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:37:59.089 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 159/189 [CỔNG GAME / viacasino] Blockchain Sic Bo Cổ Điển -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:38:05.315 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 160/189 [CỔNG GAME / viacasino] Blockchain Tài Xỉu -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:38:11.603 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 161/189 [CỔNG GAME / viacasino] Bầu Cua Việt -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:38:17.873 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 162/189 [CỔNG GAME / viacasino] Bầu Cua Thái -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:38:24.124 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 163/189 [CỔNG GAME / viacasino] Baccarat Siêu Tốc -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:38:27.361 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 164/189 [CỔNG GAME / vivo] Copa Cabana Baccarat -> PASS (NEW_TAB)
+2026-05-29 11:38:28.893 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 165/189 [CỔNG GAME / vivo] Caribbean Baccarat -> PASS (NEW_TAB)
+2026-05-29 11:38:35.256 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 166/189 [CỔNG GAME / vivo] Blackjack -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:38:36.874 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 167/189 [CỔNG GAME / vivo] Baccarat Dance -> PASS (NEW_TAB)
+2026-05-29 11:38:38.348 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 168/189 [CỔNG GAME / vivo] Dancing Baccarat -> PASS (NEW_TAB)
+2026-05-29 11:38:39.912 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 169/189 [CỔNG GAME / jdb] Big Three Dragons -> PASS (NEW_TAB)
+2026-05-29 11:38:46.308 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 170/189 [CỔNG GAME / jdb] Beauty And The Kingdom -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:38:47.219 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 171/189 [CỔNG GAME / jdb] Blossom Of Wealth -> PASS (NEW_TAB)
+2026-05-29 11:38:53.436 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 172/189 [CỔNG GAME / jdb] Boom Fiesta -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:38:54.355 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 173/189 [CỔNG GAME / jdb] Caishen Party -> PASS (NEW_TAB)
+2026-05-29 11:38:55.288 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 174/189 [CỔNG GAME / jdb] Birds And Animals -> PASS (NEW_TAB)
+2026-05-29 11:38:56.357 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 175/189 [CỔNG GAME / jdb] Caishen Coming -> PASS (NEW_TAB)
+2026-05-29 11:38:57.486 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 176/189 [CỔNG GAME / RelaxGaming] Caveman Bob -> PASS (NEW_TAB)
+2026-05-29 11:38:58.492 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 177/189 [CỔNG GAME / RelaxGaming] Deep Descent -> PASS (NEW_TAB)
+2026-05-29 11:38:59.473 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 178/189 [CỔNG GAME / RelaxGaming] Blender Blitz -> PASS (NEW_TAB)
+2026-05-29 11:39:02.331 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 179/189 [CỔNG GAME / RelaxGaming] Cluster Tumble -> PASS (NEW_TAB)
+2026-05-29 11:39:03.190 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 180/189 [CỔNG GAME / RelaxGaming] Chip Spin -> PASS (NEW_TAB)
+2026-05-29 11:39:04.040 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 181/189 [CỔNG GAME / RelaxGaming] Bill & Coin -> PASS (NEW_TAB)
+2026-05-29 11:39:05.193 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 182/189 [CỔNG GAME / RelaxGaming] Beast Mode -> PASS (NEW_TAB)
+2026-05-29 11:39:09.921 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 183/189 [CỔNG GAME / KingMaker] Belangkai 2 -> PASS (NEW_TAB)
+2026-05-29 11:39:16.148 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 184/189 [CỔNG GAME / sagaming] Diamond Baccarat -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:39:22.396 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 185/189 [CỔNG GAME / sagaming] Blackjack -> FAIL (NONE) | No outcome after 6s
+2026-05-29 11:39:24.091 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 186/189 [CỔNG GAME / redtiger] Chinese Treasures -> FAIL (NEW_TAB) | Invalid URL: https://spadetechplay.evo-games.com/frontend/evo/errors/incorrect-currency-for-geo-location.html?lang=vi
+2026-05-29 11:39:25.908 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 187/189 [CỔNG GAME / ga28] Đá Gà 28 -> PASS (NEW_TAB)
+2026-05-29 11:39:28.923 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 188/189 [CỔNG GAME / ksport] Đá Gà K-Sport -> PASS (NEW_TAB)
+2026-05-29 11:39:32.113 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - 189/189 [CỔNG GAME / WS168] Đá Gà Ws168 -> PASS (NEW_TAB)
+2026-05-29 11:39:33.391 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - Excel report exported: /Users/ccruz/IdeaProjects/WebSelenium/test-output/excel/GameScanReport_20260529_113932.xlsx
+2026-05-29 11:39:33.396 [TestNG-test-Regression-1] INFO  com.webselenium.helpers.LogUtils - >>> PASSED: testSampleGamesPlayable
+2026-05-29 11:39:33.784 [main] INFO  com.webselenium.helpers.LogUtils - ===== END SUITE: Regression =====
