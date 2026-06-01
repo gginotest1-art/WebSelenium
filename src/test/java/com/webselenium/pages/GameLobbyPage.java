@@ -244,13 +244,15 @@ public class GameLobbyPage extends BasePage {
                     List<WebElement> tx = modals.get(0).findElements(ERROR_MODAL_TEXT);
                     if (!tx.isEmpty()) errorText = tx.get(0).getText().trim();
                 } catch (Exception ignored) {}
+                // Capture screenshot WHILE modal vẫn còn hiển thị, trước khi dismiss
+                String shotPath = captureFailScreenshot(name);
                 try {
                     List<WebElement> btn = modals.get(0).findElements(ERROR_MODAL_DISMISS);
                     if (!btn.isEmpty()) ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn.get(0));
                 } catch (Exception ignored) {}
                 pause(300);
                 return new GameCheckResult("CỔNG GAME", provider, name, false,
-                        GameCheckResult.OpenMode.NONE, "Modal: " + errorText);
+                        GameCheckResult.OpenMode.NONE, "Modal: " + errorText, shotPath);
             }
             Set<String> current;
             try { current = new HashSet<>(driver.getWindowHandles()); }
@@ -260,15 +262,23 @@ public class GameLobbyPage extends BasePage {
                 diff.removeAll(beforeHandles);
                 String newTab = diff.iterator().next();
                 String url = "";
-                try { driver.switchTo().window(newTab); url = driver.getCurrentUrl(); }
-                catch (Exception ignored) {}
+                String shotPath = null;
+                try {
+                    driver.switchTo().window(newTab);
+                    url = driver.getCurrentUrl();
+                    if (!isUrlPlayable(url)) {
+                        // Chụp ảnh tab lỗi TRƯỚC khi đóng
+                        shotPath = captureFailScreenshot(name);
+                    }
+                } catch (Exception ignored) {}
                 finally {
                     try { driver.close(); } catch (Exception ignored) {}
                     switchToSurvivingWindow(mainWindow);
                 }
                 boolean ok = isUrlPlayable(url);
                 return new GameCheckResult("CỔNG GAME", provider, name, ok,
-                        GameCheckResult.OpenMode.NEW_TAB, ok ? "url=" + url : "Invalid URL: " + url);
+                        GameCheckResult.OpenMode.NEW_TAB,
+                        ok ? "url=" + url : "Invalid URL: " + url, shotPath);
             }
             WebElement iframe = pickLargestIframe();
             if (iframe != null) {
@@ -281,8 +291,21 @@ public class GameLobbyPage extends BasePage {
             }
             pause(150);
         }
+        // Timeout: chụp current state để xem màn hình bị stuck thế nào
         return new GameCheckResult("CỔNG GAME", provider, name, false,
-                GameCheckResult.OpenMode.NONE, "No outcome after 6s");
+                GameCheckResult.OpenMode.NONE, "No outcome after 6s",
+                captureFailScreenshot(name));
+    }
+
+    private String captureFailScreenshot(String gameName) {
+        try {
+            String safe = gameName == null ? "fail" : gameName.replaceAll("[^a-zA-Z0-9._-]", "_");
+            if (safe.length() > 40) safe = safe.substring(0, 40);
+            return com.webselenium.helpers.ScreenshotUtils.capture(driver, "fail_" + safe);
+        } catch (Exception e) {
+            LogUtils.warn("Capture fail screenshot failed: " + e.getMessage());
+            return null;
+        }
     }
 
     private String jsString(String s) {

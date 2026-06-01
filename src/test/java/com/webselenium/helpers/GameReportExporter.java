@@ -21,7 +21,7 @@ import java.util.Set;
 public class GameReportExporter {
 
     private static final String[] COLUMNS = {
-            "#", "Lobby", "Provider", "Game", "Mode", "Status", "Reason"
+            "#", "Lobby", "Provider", "Game", "Mode", "Status", "Reason", "Screenshot"
     };
 
     private static final String[] INVENTORY_COLUMNS = {
@@ -81,6 +81,7 @@ public class GameReportExporter {
                 createCell(row, 4, r.mode == null ? "" : r.mode.name(), rowStyle);
                 createCell(row, 5, r.playable ? "PASS" : "FAIL", rowStyle);
                 createCell(row, 6, r.reason, rowStyle);
+                createCell(row, 7, r.screenshotPath == null ? "" : r.screenshotPath, rowStyle);
             }
 
             // Summary sheet
@@ -127,6 +128,12 @@ public class GameReportExporter {
             sb.append("<td>").append(r.mode == null ? "" : r.mode.name()).append("</td>");
             sb.append("<td><b>").append(r.playable ? "PASS" : "FAIL").append("</b></td>");
             sb.append("<td>").append(escape(r.reason)).append("</td>");
+            sb.append("<td>");
+            if (r.screenshotPath != null && !r.screenshotPath.isBlank()) {
+                sb.append("<a href='file://").append(escape(r.screenshotPath))
+                        .append("' target='_blank'>view</a>");
+            }
+            sb.append("</td>");
             sb.append("</tr>");
         }
         sb.append("</tbody></table>");

@@ -62,6 +62,22 @@ public class ExtentLogger {
         ExtentTestManager.logMessage(Status.FAIL, message);
     }
 
+    public static void failWithScreenshotPath(String message, String screenshotPath) {
+        com.aventstack.extentreports.ExtentTest test = ExtentTestManager.getExtentTest();
+        if (test == null) return;
+        if (screenshotPath != null && !screenshotPath.isBlank()) {
+            try {
+                byte[] bytes = java.nio.file.Files.readAllBytes(java.nio.file.Paths.get(screenshotPath));
+                String base64 = java.util.Base64.getEncoder().encodeToString(bytes);
+                test.log(Status.FAIL, message,
+                        MediaEntityBuilder.createScreenCaptureFromBase64String(
+                                "data:image/png;base64," + base64).build());
+                return;
+            } catch (Exception ignored) {}
+        }
+        test.log(Status.FAIL, message);
+    }
+
     public static void skip(String message) {
         ExtentTestManager.logMessage(Status.SKIP, message);
     }
