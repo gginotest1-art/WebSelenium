@@ -42,10 +42,10 @@ public class CheckSampleGamesPlayable extends BaseTest {
         long failCount = results.size() - passCount;
         ExtentLogger.step("Sample verify: " + results.size() + " game | PASS: " + passCount + " | FAIL: " + failCount);
 
-        // Log từng kết quả
+        // Log từng kết quả — fail kèm screenshot nếu có
         for (GameCheckResult r : results) {
             if (r.playable) ExtentLogger.pass(r.toString());
-            else ExtentLogger.fail(r.toString());
+            else ExtentLogger.failWithScreenshotPath(r.toString(), r.screenshotPath);
         }
 
         // Bảng HTML tổng hợp

@@ -244,13 +244,24 @@ public class GameLobbyPage extends BasePage {
                     List<WebElement> tx = modals.get(0).findElements(ERROR_MODAL_TEXT);
                     if (!tx.isEmpty()) errorText = tx.get(0).getText().trim();
                 } catch (Exception ignored) {}
+                // Đợi modal render đầy đủ nội dung lỗi rồi mới chụp
+                pause(2000);
+                // Refresh error text sau khi đợi (text có thể đổi khi modal mới load xong)
+                try {
+                    List<WebElement> tx = modals.get(0).findElements(ERROR_MODAL_TEXT);
+                    if (!tx.isEmpty()) {
+                        String refreshed = tx.get(0).getText().trim();
+                        if (!refreshed.isEmpty()) errorText = refreshed;
+                    }
+                } catch (Exception ignored) {}
+                String shotPath = captureFailScreenshot(name);
                 try {
                     List<WebElement> btn = modals.get(0).findElements(ERROR_MODAL_DISMISS);
                     if (!btn.isEmpty()) ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn.get(0));
                 } catch (Exception ignored) {}
                 pause(300);
                 return new GameCheckResult("CỔNG GAME", provider, name, false,
-                        GameCheckResult.OpenMode.NONE, "Modal: " + errorText);
+                        GameCheckResult.OpenMode.NONE, "Modal: " + errorText, shotPath);
             }
             Set<String> current;
             try { current = new HashSet<>(driver.getWindowHandles()); }
@@ -260,15 +271,26 @@ public class GameLobbyPage extends BasePage {
                 diff.removeAll(beforeHandles);
                 String newTab = diff.iterator().next();
                 String url = "";
-                try { driver.switchTo().window(newTab); url = driver.getCurrentUrl(); }
-                catch (Exception ignored) {}
+                String shotPath = null;
+                try {
+                    driver.switchTo().window(newTab);
+                    url = driver.getCurrentUrl();
+                    if (!isUrlPlayable(url)) {
+                        // Đợi trang lỗi load đầy đủ rồi mới chụp
+                        pause(2000);
+                        // Re-read URL trong trường hợp redirect xảy ra trong lúc đợi
+                        try { url = driver.getCurrentUrl(); } catch (Exception ignored) {}
+                        shotPath = captureFailScreenshot(name);
+                    }
+                } catch (Exception ignored) {}
                 finally {
                     try { driver.close(); } catch (Exception ignored) {}
                     switchToSurvivingWindow(mainWindow);
                 }
                 boolean ok = isUrlPlayable(url);
                 return new GameCheckResult("CỔNG GAME", provider, name, ok,
-                        GameCheckResult.OpenMode.NEW_TAB, ok ? "url=" + url : "Invalid URL: " + url);
+                        GameCheckResult.OpenMode.NEW_TAB,
+                        ok ? "url=" + url : "Invalid URL: " + url, shotPath);
             }
             WebElement iframe = pickLargestIframe();
             if (iframe != null) {
@@ -281,8 +303,22 @@ public class GameLobbyPage extends BasePage {
             }
             pause(150);
         }
+        // Timeout: đợi thêm 2s phòng khi lỗi đang render rồi chụp current state
+        pause(2000);
         return new GameCheckResult("CỔNG GAME", provider, name, false,
-                GameCheckResult.OpenMode.NONE, "No outcome after 6s");
+                GameCheckResult.OpenMode.NONE, "No outcome after 6s",
+                captureFailScreenshot(name));
+    }
+
+    private String captureFailScreenshot(String gameName) {
+        try {
+            String safe = gameName == null ? "fail" : gameName.replaceAll("[^a-zA-Z0-9._-]", "_");
+            if (safe.length() > 40) safe = safe.substring(0, 40);
+            return com.webselenium.helpers.ScreenshotUtils.capture(driver, "fail_" + safe);
+        } catch (Exception e) {
+            LogUtils.warn("Capture fail screenshot failed: " + e.getMessage());
+            return null;
+        }
     }
 
     private String jsString(String s) {

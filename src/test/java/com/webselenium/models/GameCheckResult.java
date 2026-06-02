@@ -8,17 +8,25 @@ public class GameCheckResult {
     public final boolean playable;
     public final String reason;
     public final OpenMode mode;
+    public final String screenshotPath;
 
     public enum OpenMode { NEW_TAB, IFRAME, NONE }
 
     public GameCheckResult(String lobby, String provider, String gameName,
                            boolean playable, OpenMode mode, String reason) {
+        this(lobby, provider, gameName, playable, mode, reason, null);
+    }
+
+    public GameCheckResult(String lobby, String provider, String gameName,
+                           boolean playable, OpenMode mode, String reason,
+                           String screenshotPath) {
         this.lobby = lobby;
         this.provider = provider;
         this.gameName = gameName;
         this.playable = playable;
         this.mode = mode;
         this.reason = reason == null ? "" : reason;
+        this.screenshotPath = screenshotPath;
     }
 
     @Override
