@@ -244,7 +244,16 @@ public class GameLobbyPage extends BasePage {
                     List<WebElement> tx = modals.get(0).findElements(ERROR_MODAL_TEXT);
                     if (!tx.isEmpty()) errorText = tx.get(0).getText().trim();
                 } catch (Exception ignored) {}
-                // Capture screenshot WHILE modal vẫn còn hiển thị, trước khi dismiss
+                // Đợi modal render đầy đủ nội dung lỗi rồi mới chụp
+                pause(2000);
+                // Refresh error text sau khi đợi (text có thể đổi khi modal mới load xong)
+                try {
+                    List<WebElement> tx = modals.get(0).findElements(ERROR_MODAL_TEXT);
+                    if (!tx.isEmpty()) {
+                        String refreshed = tx.get(0).getText().trim();
+                        if (!refreshed.isEmpty()) errorText = refreshed;
+                    }
+                } catch (Exception ignored) {}
                 String shotPath = captureFailScreenshot(name);
                 try {
                     List<WebElement> btn = modals.get(0).findElements(ERROR_MODAL_DISMISS);
@@ -267,7 +276,10 @@ public class GameLobbyPage extends BasePage {
                     driver.switchTo().window(newTab);
                     url = driver.getCurrentUrl();
                     if (!isUrlPlayable(url)) {
-                        // Chụp ảnh tab lỗi TRƯỚC khi đóng
+                        // Đợi trang lỗi load đầy đủ rồi mới chụp
+                        pause(2000);
+                        // Re-read URL trong trường hợp redirect xảy ra trong lúc đợi
+                        try { url = driver.getCurrentUrl(); } catch (Exception ignored) {}
                         shotPath = captureFailScreenshot(name);
                     }
                 } catch (Exception ignored) {}
@@ -291,7 +303,8 @@ public class GameLobbyPage extends BasePage {
             }
             pause(150);
         }
-        // Timeout: chụp current state để xem màn hình bị stuck thế nào
+        // Timeout: đợi thêm 2s phòng khi lỗi đang render rồi chụp current state
+        pause(2000);
         return new GameCheckResult("CỔNG GAME", provider, name, false,
                 GameCheckResult.OpenMode.NONE, "No outcome after 6s",
                 captureFailScreenshot(name));
