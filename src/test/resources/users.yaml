@@ -1,0 +1,15 @@
+# Test user credentials. Tests auto-pick up every active user — add a new
+# block here, không cần đụng Java code.
+#
+# Schema: username, password (required); email, role, balance, tags (opt);
+#         active defaults to true — set false to skip.
+
+users:
+
+  market4:
+    username: markertest04
+    password: markertest04
+    email: market4@rikbet.net
+    role: user
+    balance: 1000
+    tags: [smoke, regression]

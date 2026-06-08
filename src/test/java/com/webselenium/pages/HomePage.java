@@ -6,6 +6,7 @@ import com.webselenium.helpers.TestDataHelper;
 import com.webselenium.helpers.UserCredentialsReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class HomePage extends BasePage {
 
@@ -57,6 +58,10 @@ public class HomePage extends BasePage {
 
     public boolean isLoginSuccessful() {
         waitForVisible(BALANCE_TEXT);
+        Assert.assertTrue(
+                isDisplayed(BALANCE_TEXT),
+                "Balance text not displayed after login"
+        );
         return isDisplayed(BALANCE_TEXT);
     }
 
