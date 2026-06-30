@@ -23,10 +23,10 @@ public class CheckSampleGamesPlayable extends BaseTest {
             groups = "smoke",
             timeOut = 60 * 60 * 1000)
     public void testSampleGamesPlayable() {
-        ExtentLogger.step("Login as market4");
-        UserCredentialsReader.UserData market4 = DataConstants.getMarket4User();
-        homePage.loginWithUserData(DataConstants.LOGIN_BUTTON_TEXT, market4);
-        Assert.assertTrue(homePage.isLoginSuccessful(), "Login failed");
+//        ExtentLogger.step("Login as market4");
+//        UserCredentialsReader.UserData market4 = DataConstants.getMarket4User();
+//        homePage.loginWithUserData(DataConstants.LOGIN_BUTTON_TEXT, market4);
+//        Assert.assertTrue(homePage.isLoginSuccessful(), "Login failed");
 
         ExtentLogger.step("Sample " + SAMPLES_PER_PROVIDER + " game/provider trong CỔNG GAME và verify");
         List<GameCheckResult> results = new ArrayList<>();

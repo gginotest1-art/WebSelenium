@@ -7,8 +7,8 @@
 users:
 
   market4:
-    username: markertest04
-    password: markertest04
+    username: markertest03
+    password: markertest03
     email: market4@rikbet.net
     role: user
     balance: 1000

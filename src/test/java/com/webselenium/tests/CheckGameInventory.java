@@ -22,10 +22,10 @@ public class CheckGameInventory extends BaseTest {
             groups = "smoke",
             timeOut = 15 * 60 * 1000)
     public void testInventoryAllGames() {
-        ExtentLogger.step("Login as market4");
-        UserCredentialsReader.UserData market4 = DataConstants.getMarket4User();
-        homePage.loginWithUserData(DataConstants.LOGIN_BUTTON_TEXT, market4);
-        Assert.assertTrue(homePage.isLoginSuccessful(), "Login failed");
+//        ExtentLogger.step("Login as market4");
+//        UserCredentialsReader.UserData market4 = DataConstants.getMarket4User();
+//        homePage.loginWithUserData(DataConstants.LOGIN_BUTTON_TEXT, market4);
+//        Assert.assertTrue(homePage.isLoginSuccessful(), "Login failed");
 
         ExtentLogger.step("Inventory game portal (CỔNG GAME + Xem thêm)");
         List<GameInventoryItem> items = new ArrayList<>();

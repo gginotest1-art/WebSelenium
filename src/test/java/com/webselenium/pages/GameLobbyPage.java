@@ -127,7 +127,21 @@ public class GameLobbyPage extends BasePage {
      *   - Không gì → FAIL (NONE)
      * - Dismiss modal nếu còn, recover before next sample
      */
+    /**
+     * Auto-dispatch: ưu tiên CỔNG GAME (nhanh hơn vì 1 lobby tổng hợp);
+     * nếu brand không có lobby này thì walk từng lobby/provider.
+     */
     public List<GameCheckResult> sampleVerifyGames(int perProvider) {
+        ensureValidWindow();
+        if (findLobbyByName("CỔNG GAME") != null) {
+            LogUtils.info("Brand có CỔNG GAME → portal mode");
+            return sampleVerifyGamesViaPortal(perProvider);
+        }
+        LogUtils.info("Brand không có CỔNG GAME → walk lobby/provider");
+        return sampleVerifyGamesByLobby(perProvider);
+    }
+
+    private List<GameCheckResult> sampleVerifyGamesViaPortal(int perProvider) {
         final int EXPAND_CLICKS = 30; // ~600 tiles, cover ~10 providers
         List<GameCheckResult> results = new ArrayList<>();
         Duration originalImplicit = saveAndDisableImplicitWait();
@@ -166,13 +180,16 @@ public class GameLobbyPage extends BasePage {
                 String name = samples.get(s)[0];
                 String provider = samples.get(s)[1];
 
+                // Hardening: driver có thể bị stuck trên window đã đóng sau iframe/new-tab cleanup
+                ensureValidWindow();
+
                 // Đảm bảo đang ở portal (recover nếu URL thay đổi/state dropped)
                 if (!isOnPortal()) {
                     LogUtils.info("Không ở portal, recover...");
                     recoverPortal(EXPAND_CLICKS);
                 }
 
-                GameCheckResult r = verifyGameByName(name, provider, mainWindow);
+                GameCheckResult r = verifyGameByName("CỔNG GAME", provider, name, mainWindow);
                 results.add(r);
                 LogUtils.info((s + 1) + "/" + samples.size() + " " + r.toString());
 
@@ -190,6 +207,113 @@ public class GameLobbyPage extends BasePage {
         }
     }
 
+    /**
+     * Walk từng lobby/provider, sample N game/provider, verify từng game.
+     * Dùng khi brand không có CỔNG GAME tổng hợp.
+     */
+    private List<GameCheckResult> sampleVerifyGamesByLobby(int perProvider) {
+        List<GameCheckResult> results = new ArrayList<>();
+        Duration originalImplicit = saveAndDisableImplicitWait();
+        String mainWindow;
+        try { mainWindow = driver.getWindowHandle(); }
+        catch (Exception e) { return results; }
+
+        try {
+            ensureValidWindow();
+            int lobbyCount = driver.findElements(LOBBY_TABS).size();
+            LogUtils.info("Walking " + lobbyCount + " lobbies, " + perProvider + " game/provider");
+
+            for (int i = 0; i < lobbyCount; i++) {
+                ensureValidWindow();
+                String lobbyName = openLobbyByIndex(i);
+                if (lobbyName == null) continue;
+
+                boolean hasProvider = !driver.findElements(PROVIDER_DROPDOWN).isEmpty();
+                if (hasProvider) {
+                    int providerCount = driver.findElements(PROVIDER_NAME).size();
+                    LogUtils.info("Lobby [" + lobbyName + "] has " + providerCount + " providers");
+                    for (int p = 0; p < providerCount; p++) {
+                        sampleVerifyOneBucket(results, lobbyName, i, p, perProvider, mainWindow);
+                    }
+                } else {
+                    LogUtils.info("Lobby [" + lobbyName + "] no provider");
+                    sampleVerifyOneBucket(results, lobbyName, i, -1, perProvider, mainWindow);
+                }
+            }
+            return results;
+        } finally {
+            restoreImplicitWait(originalImplicit);
+        }
+    }
+
+    /**
+     * Sample + verify 1 (lobby, provider) bucket. providerIdx=-1 nghĩa là lobby không có provider.
+     */
+    private void sampleVerifyOneBucket(List<GameCheckResult> results, String lobbyName,
+                                       int lobbyIdx, int providerIdx, int perProvider,
+                                       String mainWindow) {
+        ensureValidWindow();
+        // (Re-)mở lobby + provider
+        if (openLobbyByIndex(lobbyIdx) == null) return;
+        String providerName = "-";
+        if (providerIdx >= 0) {
+            providerName = openProviderByIndex(providerIdx);
+            if (providerName == null) return;
+        }
+
+        waitForGameTilesOrTimeout(2500);
+        if (driver.findElements(GAME_ITEMS).isEmpty()) {
+            LogUtils.info("[" + lobbyName + " / " + providerName + "]: 0 games, skip");
+            return;
+        }
+        expandAllShowMore();
+
+        List<Map<String, String>> tiles = extractAllGameTilesViaJS();
+        if (tiles.isEmpty()) return;
+
+        Random rng = new Random(42 + lobbyIdx * 1000L + providerIdx);
+        List<Map<String, String>> shuffled = new ArrayList<>(tiles);
+        Collections.shuffle(shuffled, rng);
+        int n = Math.min(perProvider, shuffled.size());
+        LogUtils.info("[" + lobbyName + " / " + providerName + "]: sample " + n + "/" + tiles.size());
+
+        for (int j = 0; j < n; j++) {
+            String name = shuffled.get(j).getOrDefault("name", "");
+            String providerOnTile = shuffled.get(j).getOrDefault("provider", "");
+            String effectiveProvider = providerOnTile.isBlank() ? providerName : providerOnTile;
+
+            // Đảm bảo đang ở đúng (lobby, provider) — recover nếu state lost
+            if (driver.findElements(GAME_ITEMS).isEmpty()) {
+                recoverLobbyProvider(lobbyIdx, providerIdx);
+            }
+
+            GameCheckResult r = verifyGameByName(lobbyName, effectiveProvider, name, mainWindow);
+            results.add(r);
+            LogUtils.info((j + 1) + "/" + n + " " + r.toString());
+
+            dismissErrorModalIfAny();
+
+            // Sau iframe: re-navigate về home + re-mở lobby+provider
+            if (r.mode == GameCheckResult.OpenMode.IFRAME) {
+                recoverLobbyProvider(lobbyIdx, providerIdx);
+            }
+            pause(150);
+        }
+    }
+
+    private void recoverLobbyProvider(int lobbyIdx, int providerIdx) {
+        try {
+            driver.get(com.webselenium.helpers.ConfigReader.getBaseUrl());
+            pause(1500);
+        } catch (Exception e) {
+            LogUtils.warn("Recover navigate failed: " + e.getMessage());
+        }
+        ensureValidWindow();
+        openLobbyByIndex(lobbyIdx);
+        if (providerIdx >= 0) openProviderByIndex(providerIdx);
+        waitForGameTilesOrTimeout(2500);
+    }
+
     private boolean isOnPortal() {
         try {
             int count = driver.findElements(GAME_ITEMS).size();
@@ -199,7 +323,7 @@ public class GameLobbyPage extends BasePage {
         }
     }
 
-    private GameCheckResult verifyGameByName(String name, String provider, String mainWindow) {
+    private GameCheckResult verifyGameByName(String lobby, String provider, String name, String mainWindow) {
         // JS: tìm tile theo tên (case-insensitive), click button "Chơi ngay" hoặc tile
         String findClickJs =
                 "const target = " + jsString(name.trim().toLowerCase()) + ";" +
@@ -220,18 +344,18 @@ public class GameLobbyPage extends BasePage {
         Set<String> beforeHandles;
         try { beforeHandles = new HashSet<>(driver.getWindowHandles()); }
         catch (Exception e) {
-            return new GameCheckResult("CỔNG GAME", provider, name, false,
+            return new GameCheckResult(lobby, provider, name, false,
                     GameCheckResult.OpenMode.NONE, "getWindowHandles failed");
         }
 
         Object clickResult;
         try { clickResult = ((JavascriptExecutor) driver).executeScript(findClickJs); }
         catch (Exception e) {
-            return new GameCheckResult("CỔNG GAME", provider, name, false,
+            return new GameCheckResult(lobby, provider, name, false,
                     GameCheckResult.OpenMode.NONE, "JS click failed: " + e.getMessage());
         }
         if ("NOT_FOUND".equals(String.valueOf(clickResult))) {
-            return new GameCheckResult("CỔNG GAME", provider, name, false,
+            return new GameCheckResult(lobby, provider, name, false,
                     GameCheckResult.OpenMode.NONE, "Tile name không tìm thấy trong DOM hiện tại");
         }
 
@@ -260,7 +384,7 @@ public class GameLobbyPage extends BasePage {
                     if (!btn.isEmpty()) ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn.get(0));
                 } catch (Exception ignored) {}
                 pause(300);
-                return new GameCheckResult("CỔNG GAME", provider, name, false,
+                return new GameCheckResult(lobby, provider, name, false,
                         GameCheckResult.OpenMode.NONE, "Modal: " + errorText, shotPath);
             }
             Set<String> current;
@@ -286,9 +410,10 @@ public class GameLobbyPage extends BasePage {
                 finally {
                     try { driver.close(); } catch (Exception ignored) {}
                     switchToSurvivingWindow(mainWindow);
+                    ensureValidWindow();
                 }
                 boolean ok = isUrlPlayable(url);
-                return new GameCheckResult("CỔNG GAME", provider, name, ok,
+                return new GameCheckResult(lobby, provider, name, ok,
                         GameCheckResult.OpenMode.NEW_TAB,
                         ok ? "url=" + url : "Invalid URL: " + url, shotPath);
             }
@@ -297,7 +422,7 @@ public class GameLobbyPage extends BasePage {
                 String src = "";
                 try { src = iframe.getAttribute("src"); } catch (Exception ignored) {}
                 if (src != null && !src.isBlank() && !src.equals("about:blank")) {
-                    return new GameCheckResult("CỔNG GAME", provider, name, true,
+                    return new GameCheckResult(lobby, provider, name, true,
                             GameCheckResult.OpenMode.IFRAME, "src=" + src);
                 }
             }
@@ -305,7 +430,7 @@ public class GameLobbyPage extends BasePage {
         }
         // Timeout: đợi thêm 2s phòng khi lỗi đang render rồi chụp current state
         pause(2000);
-        return new GameCheckResult("CỔNG GAME", provider, name, false,
+        return new GameCheckResult(lobby, provider, name, false,
                 GameCheckResult.OpenMode.NONE, "No outcome after 6s",
                 captureFailScreenshot(name));
     }
